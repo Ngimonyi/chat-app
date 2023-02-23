@@ -1,23 +1,23 @@
 import MessageInput from './MessageInput';
 import Message from './Message';
+import { useContext } from 'react';
+import { ScaleDroneContext } from './ScaleDroneContext';
 
-const ChatRoom = () => {
+const ChatRoom = ({ }) => {
+    const context = useContext(ScaleDroneContext);
 
-    //const messages = [1, 2, 3];
-
-    const handleInputMessage = (message) => {
+    const handleSendMessage = (message) => {
         // ovdje ovu poruku trebamo posati na Scaledrone
+        context.sendMessage(message);
     }
 
     return <div>
-        {/* {messages.map(msg => {
-            return <Message position={'hfjdhjfh'} />
-        })} */}
+        {context.messages.map(msg => {
+            const position = msg.clientId === context.member.id ? 'left' : 'right';
+            return <Message key={msg.id} position={position} message={msg.data} />
+        })}
 
-        <Message message={"Bok chat"} member={"Joe"} position={"left"} />
-        <Message message={"Bok i tebi"} member={"Peter"} position={"right"} />
-
-        <MessageInput onMessage={handleInputMessage} />
+        <MessageInput onSendMessage={handleSendMessage} />
     </div>
 }
 

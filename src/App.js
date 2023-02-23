@@ -1,10 +1,14 @@
 import './App.css';
 import ChatRoom from './components/ChatRoom';
+import ScaleDronContextProvider from './components/ScaleDroneContext';
 
 function App() {
+
   return (
     <div>
-      <ChatRoom />
+      <ScaleDronContextProvider>
+        <ChatRoom />
+      </ScaleDronContextProvider>
     </div>
   );
 }

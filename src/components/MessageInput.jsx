@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-const MessageInput = ({ onMessage }) => {
+const MessageInput = ({ onSendMessage }) => {
     const [message, setMessage] = useState("");
 
     const handleClick = () => {
         // ako consumer ove komponente nije u props poslao 'onMessage' onda zanemarimo slanje poruke
-        if (onMessage) {
-            onMessage(message);
+        if (onSendMessage) {
+            onSendMessage(message);
         }
         // nakon što kliknemo na 'Send' button, očistimo <input />
         setMessage("");
