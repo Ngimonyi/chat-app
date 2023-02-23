@@ -3,7 +3,7 @@ import { useState } from "react";
 const MessageInput = ({ onSendMessage }) => {
     const [message, setMessage] = useState("");
 
-    const handleClick = () => {
+    const handleSendMessage = () => {
         // ako consumer ove komponente nije u props poslao 'onMessage' onda zanemarimo slanje poruke
         if (onSendMessage) {
             onSendMessage(message);
@@ -14,7 +14,7 @@ const MessageInput = ({ onSendMessage }) => {
 
     return <div>
         <input type={"text"} value={message} onChange={(e) => setMessage(e.target.value)} />
-        <button onClick={handleClick}>Send</button>
+        <button onClick={handleSendMessage}>Send</button>
     </div>
 }
 
