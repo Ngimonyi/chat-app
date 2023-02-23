@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const MessageInput = ({ onMessage }) => {
     const [message, setMessage] = useState("");
