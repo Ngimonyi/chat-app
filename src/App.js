@@ -2,14 +2,19 @@ import './App.css';
 import ChatRoom from './components/ChatRoom';
 import ScaleDronContextProvider from './components/ScaleDroneContext';
 
+
 function App() {
 
   return (
-    <div>
+    <>
+      <header>
+        <h1>Welcome to the chat</h1>
+      </header>
       <ScaleDronContextProvider>
         <ChatRoom />
       </ScaleDronContextProvider>
-    </div>
+    </>
+
   );
 }
 
