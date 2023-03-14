@@ -4,11 +4,10 @@ const MessageInput = ({ onSendMessage }) => {
   const [message, setMessage] = useState("");
 
   const sendMessage = () => {
-    // ako consumer ove komponente nije u props poslao 'onMessage' onda zanemarimo slanje poruke
     if (onSendMessage && message !== "") {
       onSendMessage(message);
     }
-    // nakon što kliknemo na 'Send' button, očistimo <input />
+    <input />;
     setMessage("");
   };
 
