@@ -76,21 +76,20 @@ input {
 }
 
 .avatar {
-  /* Rounded border */
   border-radius: 50%;
 
-  /* Center the content */
+ 
   align-items: center;
   display: flex;
   justify-content: center;
 
-  /* Size */
+
   height: 2rem;
   width: 2rem;
 }
 
 .avatar__image {
-  /* Size */
+
   height: 50%;
   width: 50%;
   margin-top: -15px;
