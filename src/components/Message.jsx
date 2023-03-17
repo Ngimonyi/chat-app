@@ -1,7 +1,7 @@
 const Message = ({
   message,
   member,
-  position, // can be 'left' or 'right'
+  position,
   textColor = "#FFF",
   positionLeftColor = "#e86d38",
   positionRightColor = "#38b0e8",
@@ -50,4 +50,3 @@ const Message = ({
 };
 
 export default Message;
-
