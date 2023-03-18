@@ -8,6 +8,7 @@ const ChatRoom = () => {
   const bottomRef = useRef(null);
 
   const handleSendMessage = (message) => {
+    
     context.sendMessage(message);
   };
 
@@ -22,6 +23,7 @@ const ChatRoom = () => {
           const position =
             msg.clientId === context.member.id ? "left" : "right";
 
+          
           return (
             <Message
               key={msg.id}
