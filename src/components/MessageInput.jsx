@@ -7,7 +7,6 @@ const MessageInput = ({ onSendMessage }) => {
     if (onSendMessage && message !== "") {
       onSendMessage(message);
     }
-    <input />;
     setMessage("");
   };
 
